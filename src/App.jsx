@@ -11,29 +11,37 @@ import InfoBox from './components/InfoBox'
 import Navigation from './components/Navigation'
 import CourseCard from './components/CourseCard'
 import Tablica from './components/Tablica'
+import StudentCard from './components/StudentCard'
 
 function App() {
 
+  const specyfication = {
+    language:"JavaScript",
+    type: "Frontend"
+  }
+
+  const features = [
+    "Komponenty", "JSX", "Props"
+  ]
+
+  const studentOne = {
+    firstName: "Jan",
+    lastName: "Kowalski",
+    className: "4P",
+    specialization: "technik programista",
+    gradesAverage: 4.75,
+    isActive: true
+  }
+
   return (
      <>
-      <Header />
-      <Navigation/>
+        <Techonology name="React" category="Frontend" hours={150} specyfikacja={specyfication} features={features}/>
+        <Techonology name="PHP" category="Backend" hours={70} specyfikacja={specyfication} features={features}/>
+        <Techonology name="JavaScript" category="Frontend" hours={50} specyfikacja={specyfication} features={features}/>
+        <Techonology name="Angular" category="Frontend" hours={100} specyfikacja={specyfication} features={features}/>
+        <Techonology name="MySQL" category="Backend" hours={80} specyfikacja={specyfication} features={features}/>
 
-      <main>
-        <Techonology />
-        <Student/>
-
-        <br></br>
-
-        <CourseCard/>
-
-        <br></br>
-
-        <Tablica/>
-
-      </main>
-
-      <Footer />
+          {/* <StudentCard student={studentOne}/> */}
 
     </>
   )
