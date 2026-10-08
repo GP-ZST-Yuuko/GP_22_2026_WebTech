@@ -1,0 +1,42 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import Header from './components/Header'
+import Techonology from './components/Technology'
+import Footer from './components/Footer'
+import Student from './components/Student'
+import InfoBox from './components/InfoBox'
+import Navigation from './components/Navigation'
+import CourseCard from './components/CourseCard'
+import Tablica from './components/Tablica'
+import StudentCard from './components/StudentCard'
+
+function App() {
+
+  const technologie = [
+    'React', 'JavaScript', 'CSS'
+  ]
+
+  function wyswietl(name){
+    console.log("Kliknięto technologie:" + name)
+  }
+
+  return (
+     <>
+        {
+          technologie.map((technologie) => {
+            return(
+              <InfoBox key={technologie} name={technologie} onClick={()=>wyswietl(technologie)}/>
+                  
+            );
+          })
+        }
+
+        
+    </>
+  )
+}
+
+export default App
