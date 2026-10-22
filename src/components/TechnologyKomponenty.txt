@@ -1,0 +1,44 @@
+ import { useState } from "react";
+
+ function Technology({ name, category, hours, image }) {
+
+    function showTechnology(){
+      console.log("Nazwa: " + name);
+      console.log("Kategoria: " + category);
+      console.log("Liczba godzin: " + hours);
+    }
+
+    const [likes, setLikes] = useState(0);
+
+    const [isLearning, setIsLearning] = useState(false);
+
+    return (
+      <section>
+        <br/>
+        <h2 className="naglowek2">Nazwa: {name} </h2>
+        <p className="akapit">Kategoria: {category}</p>
+        <p className="akapit">Liczba godzin: {hours}</p>
+        <button className="przycisk" onClick={showTechnology}>
+          Pokaż informacje
+        </button>
+
+        <p>Polubienia: {likes}</p>
+        <button onClick={() => setLikes(likes + 1)}>
+          Lubię
+        </button>
+
+        <button onClick={() => setLikes(0)}>
+          Reset
+        </button>
+
+        <button onClick={() => setIsLearning(!isLearning)}>
+          Zmień status nauki
+        </button>
+        <p>Status: {isLearning ? "Uczę się" : "Jeszcze nie uczę się"}</p>
+
+        <br />
+      </section>
+    )
+  }
+
+  export default Technology;
