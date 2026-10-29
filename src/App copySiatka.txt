@@ -1,0 +1,64 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Student from './components/Student'
+import InfoBox from './components/InfoBox'
+import Navigation from './components/Navigation'
+import CourseCard from './components/CourseCard'
+import Tablica from './components/Tablica'
+import StudentCard from './components/StudentCard'
+import Counter from './components/Counter'
+import Active from './components/Active'
+import Technology from './components/Technology'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
+
+  return (
+
+    <div>
+
+      <div className='container'>
+        <div className='row'>
+            <div className='col-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa velit deleniti consequuntur deserunt. Vero perferendis sed, accusantium vel fugit aperiam maiores voluptate hic fuga cumque natus assumenda laborum porro cum tempore quas ratione impedit quasi. Ipsam quam fuga cumque veniam cum itaque recusandae, explicabo impedit iusto nesciunt possimus corporis ducimus dignissimos voluptate iure eveniet ut neque tempora nemo hic? A illum obcaecati blanditiis cumque possimus nihil nostrum? Reprehenderit veritatis tempora quis repellendus, unde repudiandae soluta quam inventore corrupti, earum distinctio error itaque? Dolorem nemo, eveniet impedit nostrum facere corporis temporibus, voluptate doloribus quo hic sed ullam. Esse non illum error!</div>
+            <div className='col-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum accusamus eius tempora, rem eum voluptate repudiandae odio blanditiis distinctio laboriosam inventore labore! Reprehenderit sint a porro fugiat quae quis dolor nisi vero corporis ex illum ratione ipsum ab maiores laborum eos doloremque architecto, nesciunt quaerat in! Qui adipisci quasi saepe, beatae minima inventore repudiandae! Qui quod amet veritatis tempore nihil aut accusamus, perferendis alias, illum molestiae quo sequi ipsa! Vitae ipsa molestias perferendis nulla. A, natus distinctio. Sit temporibus numquam vitae perferendis non! Beatae omnis expedita aperiam. Similique impedit tenetur in illo sit quibusdam, cumque ea provident ut modi rem.</div>
+            <div className='col-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odit sequi temporibus quos doloremque, porro assumenda mollitia repudiandae debitis reiciendis quia est labore harum et eos nulla suscipit possimus rem ab maxime hic corrupti beatae earum corporis? Earum facilis aperiam quasi aliquam. Veniam porro quos rem tempora aliquam reprehenderit sed accusamus maxime aperiam dolores delectus voluptas, at est a dignissimos facere perferendis dolore error iusto nobis eveniet temporibus culpa numquam provident. Quisquam consectetur placeat sint, doloremque fugiat dolores obcaecati tenetur accusamus esse ad a odit excepturi commodi? Ipsum, incidunt vitae et labore dignissimos modi distinctio, tempora eaque placeat eligendi tempore!</div>
+        </div>
+
+          <br/>
+
+          <div className='row g-3'>
+            <div className='col-4 px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam esse odit praesentium ducimus consequatur sed, ipsum exercitationem eos rerum. Maiores fugiat corporis dolorem odit at nisi obcaecati vero beatae blanditiis nulla praesentium temporibus dolores veniam quas optio aspernatur expedita molestias asperiores sit amet, consequuntur ex eius voluptatibus! Quo harum magni quis, voluptatem incidunt qui quibusdam, fuga labore quas illo repellat voluptates in deleniti modi error pariatur, ea veniam alias eligendi deserunt quidem doloribus nulla maxime fugiat. Itaque deleniti expedita eius iste ratione illo dolorem recusandae sunt laborum nostrum perspiciatis fuga excepturi neque tempora, architecto corporis atque placeat deserunt unde sed?</div>
+            <div className='col-4 py-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quae eveniet placeat soluta odio porro, nulla sequi similique laborum quasi nesciunt alias vero inventore perspiciatis dicta architecto dignissimos dolorum itaque est possimus labore laudantium! Unde maiores quae odit consectetur provident earum tempore, autem repellendus excepturi ipsam quia non tenetur modi laborum possimus ab assumenda odio, porro corporis! Explicabo, quod maxime iure cupiditate voluptates eveniet velit consectetur totam ratione laboriosam commodi fugiat nostrum alias delectus. Veritatis accusamus nam beatae odio necessitatibus soluta et autem numquam qui, alias aut natus, maiores ad, sequi exercitationem vel nostrum. Fugit dolorem repellat sint minima magni!</div>
+            <div className='col-4 p-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem cumque unde aliquam deserunt ducimus quidem dolorem veritatis, officiis tempora asperiores laborum architecto possimus voluptas aspernatur modi blanditiis dolore tempore magnam amet praesentium laudantium! Ipsum ex quo saepe distinctio laborum eveniet mollitia omnis nam voluptatibus eum accusantium, maiores deleniti eaque quas reiciendis iusto quod suscipit commodi ad explicabo totam quos ea. Earum commodi nostrum quisquam mollitia placeat nemo repellat culpa nam adipisci ad exercitationem nisi aperiam autem, pariatur alias vero sint repudiandae officiis corrupti amet sit. Expedita sequi aliquam labore architecto quae minus tempora, ullam ratione repellendus, sed officiis libero?</div>
+        </div>
+
+          <br/>
+
+          <div className='row'>
+            <div className='col-9 m-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe necessitatibus molestias illum aperiam quibusdam at eaque, impedit labore ipsam, velit, error sint recusandae in similique non? Velit, ipsum. Perferendis eligendi accusantium qui eos accusamus molestiae reiciendis ullam esse excepturi asperiores, fugiat laudantium aperiam voluptas totam ipsa. Laudantium blanditiis velit iusto aliquam, nobis assumenda suscipit magnam harum ipsum eligendi omnis voluptate placeat vero beatae animi! Consectetur fugit assumenda expedita vel enim ratione quisquam dolores, iure quis iste illum blanditiis quia placeat laborum quam! Culpa delectus est vitae. Beatae non, recusandae repudiandae distinctio, temporibus assumenda ipsa, laborum maxime laboriosam soluta reprehenderit dolorum?</div>
+            <div className='col-3 mt-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore architecto sit quas ratione minus cupiditate, dolor asperiores suscipit fugit cum molestias? Quod asperiores voluptatibus, alias unde reiciendis non nostrum, ea dolore accusantium ipsam iure laboriosam aspernatur soluta repudiandae velit error recusandae in officia doloremque? Amet at obcaecati tempore. Quidem officiis aliquid illum, magni molestiae debitis. Laborum dolor odio vitae voluptate. Esse quasi placeat vel reprehenderit fugiat corporis fugit qui officia alias perspiciatis veritatis cumque quae facere nisi ipsum, aspernatur officiis. Quisquam hic debitis odio! Repellendus, facere. Ut consequatur commodi id nesciunt expedita aliquid libero fugit beatae alias, quae laboriosam neque.</div>
+        </div>
+
+        <div className='row'>
+            <div className='col-12 col-md-6 col-lg-4'>A1</div>
+            <div className='col-12 col-md-6 col-lg-4'>B2</div>
+            <div className='col-12 col-md-6 col-lg-4'>C3</div>
+        </div>
+
+        <div className='form-check'> 
+          <input type="checkbox" id='przypomnienie' className='form-check-input'></input>
+          <label for="przypomnienie" className='form-check-label'>
+            Przypomnienie o kursie
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App

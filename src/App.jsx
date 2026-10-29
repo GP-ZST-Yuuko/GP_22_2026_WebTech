@@ -14,41 +14,97 @@ import StudentCard from './components/StudentCard'
 import Counter from './components/Counter'
 import Active from './components/Active'
 import Technology from './components/Technology'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Checkbox from './components/Checkbox'
 
 function App() {
 
-  const technologies = [
-    { id: 1, name: "React", category: "Frontend",hours: 15, image:"react.webp"},
-    { id: 2, name: "Bootstrap", category: "Frontend",hours: 10 , image:"bootstrap.webp"},
-    { id: 3, name: "CSS", category: "Frontend",hours: 5, image:"css.webp" },
-    { id: 4, name: "Express", category: "Backend",hours: 25 , image:"express.webp"},
-    { id: 5, name: "HTML", category: "Baza danych",hours: 20, image:"htmnl.webp" },
-    { id: 6, name: "MangoDB", category: "Baza danych",hours: 20 , image:"mongodb.webp"},
-    { id: 7, name: "MySQL", category: "Baza danych",hours: 20 , image:"mysql.webp"},
-    { id: 8, name: "NodeJS", category: "Baza danych",hours: 20 , image:"nodejs.webp"},
-    { id: 9, name: "PHP", category: "Baza danych",hours: 20 , image:"php.webp"}
-  ];
+  const [showFlowers, setShowFlowers] = useState(true);
+  const [showAnimals, setShowAnimals] = useState(true);
+  const [showCars, setShowCars] = useState(true);
+
+  const photos = [
+    { id: 10, alt: "Mak", filename: "obraz1.jpg", category: 1, downloads: 35 },
+    { id: 10, alt: "Mak", filename: "obraz1.jpg", category: 1, downloads: 35 },
+    { id: 10, alt: "Mak", filename: "obraz1.jpg", category: 1, downloads: 35 }
+  ]
+
+  const filteredPhotos = photos.filter((photo) => {
+    return (
+      (photo.category === 1 && showFlowers) ||
+      (photo.category === 2 && showAnimals) ||
+      (photo.category === 3 && showCars)
+    );
+  });
 
   return (
-     <>
-        {
-          technologies.map((technology) => (
-            <Technology
-            key={technology.id}
-            name={technology.name}
-            category={technology.category}
-            hours={technology.hours} />
-        ))
+      <div>
+          <Checkbox/>
+          <div className="form-check form-switch form-check-inline">
+    <input
+      className="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flowers"
+      checked={showFlowers}
+      onChange={(event) => setShowFlowers(event.target.checked)}
+    />
+    <label className="form-check-label" htmlFor="flowers">
+      Kwiaty
+    </label>
+  </div>
 
-        
-      
-      }
+  <div className="form-check form-switch form-check-inline">
+    <input
+      className="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="animals"
+      checked={showAnimals}
+      onChange={(event) => setShowAnimals(event.target.checked)}
+    />
+    <label className="form-check-label" htmlFor="animals">
+      Zwierzęta
+    </label>
+  </div>
 
+  <div className="form-check form-switch form-check-inline">
+    <input
+      className="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="cars"
+      checked={showCars}
+      onChange={(event) => setShowCars(event.target.checked)}
+    />
+    <label className="form-check-label" htmlFor="cars">
+      Samochody
+    </label>
+  </div>
+  <div>
+    {filteredPhotos.map((photo) => (
+      <div key={photo.id} className="d-inline-block">
+        <img
+          src={"/assets/" + photo.filename}
+          alt={photo.alt}
+          className="rounded"
+          style={{ margin: "5px" }}
+        />
+        <h4>Pobrań: {photo.downloads}</h4>
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => download(photo.id)}
+        >
+          Pobierz
+        </button>
+      </div>
+    ))}
+  </div>
+  
+    </div>
 
-        
-
-    </>
-  )
+  );
 }
 
 export default App

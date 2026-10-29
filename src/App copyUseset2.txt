@@ -1,0 +1,67 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Student from './components/Student'
+import InfoBox from './components/InfoBox'
+import Navigation from './components/Navigation'
+import CourseCard from './components/CourseCard'
+import Tablica from './components/Tablica'
+import StudentCard from './components/StudentCard'
+import Counter from './components/Counter'
+import Active from './components/Active'
+import Technology from './components/Technology'
+
+function App() {
+
+    const [photos, setPhotos] = useState([
+      { id: 10, alt: "Mak", downloads: 35 },
+      { id: 20, alt: "Bukiet", downloads: 43 },
+      { id: 30, alt: "Dalmatyńczyk", downloads: 2 },
+      { id: 40, alt: "Bułka", downloads: 33}
+    ]);
+
+    function download(id) {
+      setPhotos((previousPhotos) =>
+        previousPhotos.map((photo) => {
+          if (photo.id === id) {
+            return { ...photo, downloads: photo.downloads + 1 };
+          }
+          return photo;
+        })
+      );
+    }
+
+    function reset(id){
+      setPhotos((previousPhotos) =>
+        previousPhotos.map((photo) => {
+          if(photo.id === id)
+          {
+            return{ ...photo, downloads: 0};
+          }
+          return photo;
+        })
+        
+      );
+    }
+
+  return (
+
+        <div>
+      <h1>Galeria</h1>
+      {photos.map((photo) => (
+        <div key={photo.id}>
+          <h2>{photo.alt}</h2>
+          <p>Pobrania: {photo.downloads}</p>
+          <button onClick={() => download(photo.id)}>Pobierz</button>
+          <button onClick={() => reset(photo.id)}>Wyzeruj</button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default App
